@@ -1,0 +1,94 @@
+<!-- Begin Main -->
+<div id="main" class="shell">
+    <!-- Begin Content -->
+
+    <!-- End Content -->
+    <!-- Begin Sidebar -->
+    <div id="sidebar">
+        <ul>
+
+        </ul>
+    </div>
+    <!-- End Sidebar -->
+    <div>&nbsp;</div>
+    <br />
+    <table id="shopping-cart-table" >
+        <form name="form1" method="post" action="include/aggiornacart.php">
+        <colgroup><col width="1">
+            <col>
+            <col width="1">
+            <col width="1">
+            <col width="1">
+            <col width="1">
+
+        </colgroup><thead>
+            <tr >
+                <th rowspan="1">&nbsp;</th>
+                <th rowspan="1"><span>Nome Prodotto</span></th>
+                <th colspan="1"><span>Prezzo Unitario</span></th>
+                <th rowspan="1">Qtà</th>
+                <th colspan="1">Subtotale</th>
+                <th rowspan="1">&nbsp;</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr >
+                <td colspan="50">
+                    <button type="submit" title="Aggiorna Carrello" class="button btn-update"><span><span>Aggiorna Carrello</span></span></button>
+                </td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <[cart_place::insertcart library="cart"]>
+        </tbody>
+        </form>
+    </table>
+    <div class="cart-collaterals">
+        <div class="totals">
+            <table id="shopping-cart-totals-table">
+                <[tot_place::inserttotals library="cart"]>
+                <!--<colgroup><col>
+                    <col width="1">
+                </colgroup><tfoot>
+                    <tr>
+                        <td style="" colspan="1">
+                            <strong>Imponibile</strong>
+                        </td>
+                        <td style="">
+                            <strong><span>€&nbsp;58,51</span></strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="" colspan="1">
+                            IVA            </td>
+                        <td style=""><span>€&nbsp;12,29</span></td>
+                    </tr>
+                    <tr>
+                        <td style="" colspan="1">
+                            <strong>Totale</strong>
+                        </td>
+                        <td style="">
+                            <strong><span>€&nbsp;70,80</span></strong>
+                        </td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td style="" colspan="1">
+                            Totale parziale    </td>
+                        <td style="">
+                            <span>€&nbsp;58,51</span>    </td>
+                    </tr>
+                </tbody>-->
+            </table>
+            <ul class="checkout-types">
+                <li>    <button type="button" title="Continua con il Checkout" class="button btn-proceed-checkout btn-checkout" onclick="window.location.hdref = 'http://www.jakedstore.it/checkout/onepage/&#39;;'"><span><span>Continua con il Checkout</span></span></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div>&nbsp;</div>
+
+</div>
+<!-- End Products -->
+<!-- End Main -->
